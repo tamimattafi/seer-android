@@ -1,28 +1,28 @@
 package com.tamimattafi.seer.library
 
-import com.tamimattafi.seer.library.data.Log
-import com.tamimattafi.seer.library.data.LogFactory
+import com.tamimattafi.seer.library.data.SLog
+import com.tamimattafi.seer.library.data.SLogFactory
 
 
 object Seer {
 
     fun error(tag: String, message: String) {
-        LogFactory.createErrorLog(tag, message).print()
+        SLogFactory.createErrorLog(tag, message).print()
     }
 
     fun warning(tag: String, message: String) {
-        LogFactory.createWarningLog(tag, message).print()
+        SLogFactory.createWarningLog(tag, message).print()
     }
 
     fun info(tag: String, message: String) {
-        LogFactory.createInfoLog(tag, message).print()
+        SLogFactory.createInfoLog(tag, message).print()
     }
 
-    fun custom(log: Log) {
+    fun custom(log: SLog) {
         log.print()
     }
 
-    private fun Log.print() {
+    private fun SLog.print() {
 
     }
 
